@@ -1,0 +1,6 @@
+asyncpraw
+vaderSentiment
+web3
+pandas
+streamlit
+matplotlib
