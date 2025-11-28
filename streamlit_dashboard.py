@@ -7,7 +7,6 @@ import time
 DB_PATH = "shadow_vault.db"
 st.set_page_config(
     page_title="Shadow Quant Oracle",
-    page_icon="🌑",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -47,7 +46,7 @@ def load_data():
         return pd.DataFrame()
 
 def main():
-    st.title("🌑 Shadow Quant Oracle // Void Watch")
+    st.title("Shadow Quant Oracle // Void Watch")
     st.markdown("*> Signals whispering from the deep web.*")
 
     if st.button("Refresh Signals"):
@@ -75,7 +74,7 @@ def main():
 
     st.markdown("---")
 
-    st.subheader("📊 Signal Heatmap")
+    st.subheader(" Signal Heatmap")
     
     fig, ax = plt.subplots(figsize=(10, 4))
     ax.set_facecolor('#0e1117')
@@ -96,7 +95,7 @@ def main():
 
     st.pyplot(fig)
 
-    st.subheader("📜 The Feed")
+    st.subheader(" The Feed")
     
     min_score = st.slider("Filter by VADER Score", -1.0, 1.0, 0.0)
     filtered_df = df[df['vader_compound'] >= min_score]
